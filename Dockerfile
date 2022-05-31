@@ -7,7 +7,7 @@ RUN apt install wget apt-transport-https gnupg lsb-release -y && \
     apt install trivy -y 
 WORKDIR /usr/src/app
 RUN mkdir templates
-COPY templates/trivy.tlp ./templates
+COPY trivy.tlp ./templates
 COPY trivy_api.py ./
 COPY demo.py ./
 RUN pip install flask
